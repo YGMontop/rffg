@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Fun Facts Generator</title>
+  </head>
+  <body>
+    <center>
+      <h1>Random Fun Facts Generator</h1>
+      <button onclick="generateFact()">Generate a Fun Fact</button>
+      <div id="fact-container"></div>
+      <br>
+      <a href="#">Home</a> | <a href="#">About</a> | <a href="Youtube.html">Youtube</a>
+      <br>
+      <br>
+      <small>thanks for using Random Fun Facts Generator</small>
+    </center>
+    <script>
+      function generateFact() {
+        const facts = [
+          "The world's largest snowflake on record was 15 inches wide and 8 inches thick.",
+          "The shortest war in history lasted only 38 minutes.",
+          "The longest time between two twins being born is 87 days.",
+          "Pteronophobia is the fear of being tickled by feathers.",
+          "The first item ever sold on eBay was a broken laser pointer.",
+          "The Eiffel Tower can be 15 cm taller during the summer.",
+          "A group of flamingos is called a flamboyance.",
+          "A cockroach can live for several weeks without its head.",
+          "Cows have best friends and they tend to spend most of their time together.",
+          "The average person will spend six months of their life waiting for red lights to turn green."
+        ];
+        const randomIndex = Math.floor(Math.random() * facts.length);
+        const randomFact = facts[randomIndex];
+        document.getElementById("fact-container").innerHTML = randomFact;
+      }
+    </script>
+  </body>
+</html>
